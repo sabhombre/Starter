@@ -11,7 +11,6 @@ $(document).ready(function () {
     
                 var tarr = {};
                 for (var j=0; j<headers.length; j++) {
-                    // tarr.push(headers[j]+":"+data[j]);
                     tarr[headers[j]] = data[j];
                 }
                 lines.push(tarr);
@@ -69,8 +68,6 @@ $(document).ready(function () {
 
         const cdata = JSON.parse(data);
 
-        console.log(cdata);
-
         var html = '';
 
         $(cdata.dataseries).each(function(){
@@ -98,8 +95,6 @@ $(document).ready(function () {
             var wr = this.weather;
 
             //cleandata
-
-            console.log(day+' '+mm+'/'+dd);
 
             html = html + '<div class="day-box px-2 py-4 bg-white text-dark"><div class="day d-block text-center h3 mb-2"><span class="d-block h5">'+day+'</span>'+mm+'/'+dd+'</div><div class="weather-img"><img src="/images/icons/'+wr+'.png"><span class="text-center d-block fw-bold text-uppercase wr">'+weatherD(wr)+'</span></div><span class="temp d-block text-center mt-3">High: '+high+'<br>Low: '+low+'</span></div>';
 
